@@ -16,13 +16,9 @@ struct cards {
 };
 
 void fillDeck(struct cards a[]);
-
 void printDeck(struct cards a[]);
-
 void shuffleDeck(struct cards a[]);
-
 int sortCompare(const void *p, const void *j);
-
 void sortDeck(struct cards a[]);
 
 int main(void) {
@@ -38,7 +34,6 @@ int main(void) {
     printf("-------------------\n");
     sortDeck(cardGame);
     printDeck(cardGame);
-
 
     return 0;
 }
@@ -65,67 +60,30 @@ void printDeck(struct cards a[]) {
     for (int i = 0; i < 55; ++i) {
         printf("Card %d: ", i + 1);
         switch (a[i].value) {
-            case two:
-                printf("Two of ");
-                break;
-            case three:
-                printf("Three of ");
-                break;
-            case four:
-                printf("Four of ");
-                break;
-            case five:
-                printf("Five of ");
-                break;
-            case six:
-                printf("Six of ");
-                break;
-            case seven:
-                printf("Seven of ");
-                break;
-            case eight:
-                printf("Eight of ");
-                break;
-            case nine:
-                printf("Nine of ");
-                break;
-            case ten:
-                printf("Ten of ");
-                break;
-            case knight:
-                printf("Knight of ");
-                break;
-            case queen:
-                printf("Queen of ");
-                break;
-            case king:
-                printf("King of ");
-                break;
-            case ace:
-                printf("Ace of ");
-                break;
-            case joker:
-                printf("Joker\n");
-                break;
-            default:
-                printf("Error no value assigned");
+            case two: printf("Two of "); break;
+            case three: printf("Three of "); break;
+            case four: printf("Four of "); break;
+            case five: printf("Five of "); break;
+            case six: printf("Six of "); break;
+            case seven: printf("Seven of "); break;
+            case eight: printf("Eight of "); break;
+            case nine: printf("Nine of "); break;
+            case ten: printf("Ten of "); break;
+            case knight: printf("Knight of "); break;
+            case queen: printf("Queen of "); break;
+            case king: printf("King of "); break;
+            case ace: printf("Ace of "); break;
+            case joker: printf("Joker\n"); break;
+            default: printf("Error no value assigned");
         }
 
         switch (a[i].cardColor) {
-            case hearts:
-                printf("hearts\n");
-                break;
-            case spades:
-                printf("spades\n");
-                break;
-            case diamonds:
-                printf("diamonds\n");
-                break;
-            case clover:
-                printf("clovers\n");
-                break;
-            case misc:
-                break;
+            case hearts: printf("hearts\n"); break;
+            case spades: printf("spades\n"); break;
+            case diamonds: printf("diamonds\n"); break;
+            case clover: printf("clovers\n"); break;
+            case misc: break;
+            default: printf("Error no value assigned");
         }
     }
 }//Prints an array in the current order
