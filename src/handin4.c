@@ -9,7 +9,7 @@ enum card_color {clover, diamonds, hearts, spades, misc};
 typedef struct {
     enum card_value value;
     enum card_color cardColor;
-}cards; //Holds both value and color of a card
+}cards;
 
 void fillDeck(cards deck[]);   //Takes an array and fills it with the type struct card
 void printDeck(cards deck[]);  //Prints the array in the current order
@@ -38,7 +38,7 @@ void fillDeck(cards deck[]) {
     int count = 0;
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 13; ++j) {//Fills an array with the struct "cards" from two to ace
-            deck[count].cardColor = i;   //in ascending order for each of the four card colors
+            deck[count].cardColor = i;//in ascending order for each of the four card colors
             deck[count].value = j;
 
             count++;
