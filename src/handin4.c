@@ -10,6 +10,7 @@ struct cards{
     enum card_value value;
     enum card_color cardColor;
 };
+
 void fillDeck(struct cards a[]);
 void printDeck(struct cards a[]);
 void shuffleDeck(struct cards a[]);
@@ -41,7 +42,6 @@ void fillDeck(struct cards a[]){
         for (int j = 0; j < 13; ++j) {
             a[count].cardColor = i;
             a[count].value = j;
-
             count++;
         }
     }
@@ -52,7 +52,7 @@ void fillDeck(struct cards a[]){
 
     }
 }// Fills an array with struct cards from 2 to ace
-                                    // Clover, diamonds, hearts then spades and puts 3 jokers in end
+// Clover, diamonds, hearts then spades and puts 3 jokers in end
 void printDeck(struct cards a[]){
     for (int i = 0; i < 55; ++i) {
         printf("Card %d: ",i+1);
