@@ -87,7 +87,6 @@ void shuffleDeck(cards deck[]) {//shuffles the deck in random order
     for (int i = 0; i < 55; ++i) {
 
         int randomIndex = rand() % 55; //Gets random number between 0 and 54
-
         cards TempRandom = deck[randomIndex];//Creates temp card to avoid duplicating cards
         deck[randomIndex] = deck[i];//takes the card on the random index and swaps places with the card on the
         deck[i] = TempRandom;       //index of the current iterations of the loop.
